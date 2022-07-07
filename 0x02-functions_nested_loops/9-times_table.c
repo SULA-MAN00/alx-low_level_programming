@@ -28,7 +28,7 @@ void times_table(void)
 			_putchar(units + '0');
 			if (col < 9)
 				_putchar(44);
-				col++;
+			col++;
 		}
 		col = 0;
 		row++;
