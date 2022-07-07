@@ -1,4 +1,3 @@
-
 #include "main.h"
 /**
 * times_table - function to print times table
@@ -12,7 +11,7 @@ void times_table(void)
 	int units = 0;
 	int tens = 0;
 	int n = 0;
-	
+
 	while (row < 10)
 	{
 		while (col < 10)
