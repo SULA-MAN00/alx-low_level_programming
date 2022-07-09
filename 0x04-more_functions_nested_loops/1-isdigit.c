@@ -1,12 +1,15 @@
-#include <unistd.h>
+#include "main.h"
 /**
-* _putchar - writes the character c to stdout
-* @c: The character to print
+* _isdigit - function
 *
-* Return: On success 1.
-* On error, -1 is returned, and errno is set appropriately.
+* @c: parameter
+*
+* Return: return Value
 */
-int _putchar(char c)
+int _isdigit(int c)
 {
-	return (write(1, &c, 1));
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }
