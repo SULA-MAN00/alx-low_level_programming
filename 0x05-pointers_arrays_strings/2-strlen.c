@@ -1,8 +1,6 @@
 #include "main.h"
-
 /**
-*
-* _strlen - function
+* strlen - function
 *
 * @s: pointer of parameter
 *
