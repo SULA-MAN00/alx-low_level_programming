@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
+* rev_string - function
 *
-* main - check the code
-*
-* Return: Always 0.
+* @s: pointer of parameter
 *
 */
 void rev_string(char *s)
