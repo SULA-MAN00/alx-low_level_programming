@@ -22,6 +22,6 @@ int _atoi(char *s)
 		else if (s[i - 1] >= 0 + '0' && s[i - 1] < 10 + '0')
 			break;
 	}
-	return (numero *negative);
 
+	return (numero *negative);
 }
