@@ -26,6 +26,7 @@ void print_number(int n)
 
 		if (cont > 1)
 			cont = cont / 10;
+
 		while ((abs(n) < cont) &&(cont > 1))
 		{
 			_putchar('0');
