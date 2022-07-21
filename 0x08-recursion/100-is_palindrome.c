@@ -12,7 +12,9 @@ int fakefake(char *s, char *ss, int cont);
 int is_palindrome(char *s)
 {
 	int cont;
+
 	cont = contador(s, 0);
+
 	return (fakefake(s, s + cont - 1, cont - 1));
 }
 
@@ -26,10 +28,12 @@ int is_palindrome(char *s)
 int contador(char *s1, int cont1)
 {
 	int nume = 0;
+
 	if (*s1 != '\0')
 	{
 		nume = 1 + (contador(s1 + 1, cont1 + 1));
-		return (nume);
+
+	return (nume);
 	}
 
 	else
