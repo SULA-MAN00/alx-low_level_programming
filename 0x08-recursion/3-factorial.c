@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 /**
 * factorial - get the factorial of a given number
