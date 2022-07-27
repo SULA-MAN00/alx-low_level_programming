@@ -3,8 +3,8 @@
 
 /**
 * main - print the name of this function
-* @argc: has the length of the arguments
-* @argv: has the arguments
+* @argc: number of arguments
+* @argv: array of arguments
 * 
 * Return: always 0
 */
