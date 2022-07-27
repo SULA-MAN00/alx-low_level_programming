@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int power(int b);
+
 /**
 *
 * main - print the multiplication of two arguments
@@ -26,6 +27,7 @@ int main(int argc, char **argv)
 		{
 			for (cont = 0; (argv[i])[cont] != '\0'; cont++)
 				;
+			
 			for (j = 0, cont--; (argv[i])[j] != '\0'; j++)
 			{
 				if ((argv[i])[cont - j] == '-')
