@@ -7,7 +7,6 @@
 *
 * Return: the int converted from the string
 */
-
 int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
@@ -46,7 +45,6 @@ int _atoi(char *s)
 
 	return (n);
 }
-
 /**
 * main - adds two positive number
 * @argc: number of arguments
@@ -54,7 +52,6 @@ int _atoi(char *s)
 *
 * Return: 0 (Success), or 1 (Success)
 */
-
 int main(int argc, char *argv[])
 {
 	int sum, num, i, j, k;
@@ -72,7 +69,7 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-
+	
 	for (k = 1; k < argc; k++)
 	{
 		num = _atoi(argv[k]);
@@ -81,7 +78,6 @@ int main(int argc, char *argv[])
 			sum += num;
 		}
 	}
-	
 	printf("%d\n", sum);
 	return (0);
 }
