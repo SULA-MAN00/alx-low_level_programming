@@ -1,17 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
-* main - print the length of the arguments
-* @argc: has the length of the arguments
-* @argv: has the arguments
-* Return: 0 to indicate a good working of the program
+* main - Entry Point
+* @argc: arguments
+* @argv: array pointing to arguments
+* Return: 0
 */
 
-int main(int argc, char **argv)
+int main(int argc, __attribute__((unused)) char *argv[])
 {
-	if (**argv != '\0')
-		printf("%d\n", argc - 1);
+	int i;
 
+	for (i = 0; i < argc; i++)
+	{
+	}
+	printf("%d\n", i - 1);
 	return (0);
 }
