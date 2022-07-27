@@ -1,65 +1,74 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-int power(int b);
+#include "main.h"
 
 /**
+* _atoi - converts a string to an integer
+* @s: string to be converted
 *
-* main - print the multiplication of two arguments
-*
-* @argc: has the length of the arguments
-*
-* @argv: has the arguments
-*
-* Return: 0 to indicate a good working of the program
-*
+* Return: the int converted from the string
 */
 
-int main(int argc, char **argv)
+int _atoi(char *s)
 {
-	int i, j, cont, num[2] = {0, 0};
+	int i, d, n, len, f, digit;
 
-	if (argc < 3)
-		printf("Error\n");
-	else
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (i < len && f == 0)
 	{
-		for (i = 1; argv[i] != '\0'; i++)
+		if (s[i] == '-')
+			++d;
+
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			for (cont = 0; (argv[i])[cont] != '\0'; cont++)
-				;
-			
-			for (j = 0, cont--; (argv[i])[j] != '\0'; j++)
-			{
-				if ((argv[i])[cont - j] == '-')
-				{
-					num[i - 1] *= -1;
-					break;
-				}
-				else
-					num[i - 1] = power(j) * ((argv[i])[cont - j] - '0') + num[i - 1];
-			}
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			f = 0;
 		}
-		printf("%d\n", num[0] * num[1]);
+		i++;
 	}
-	return (0);
+
+	if (f == 0)
+		return (0);
+	return (n);
 }
+
 /**
- *
- * power - get the power 10 times b
- *
- * @b: is the times of 10
- *
- * Return: the power 10 times b
- *
- */
-int power(int b)
+* main - multiplies two numbers
+* @argc: number of arguments
+* @argv: array of arguments
+*
+* Return: 0 (Success), 1 (Error)
+*/
+
+int main(int argc, char *argv[])
 {
-	int i, num = 1;
-	
-	for (i = 0; i < b; i++)
+	int result, num1, num2;
+
+	if (argc < 3 || argc > 3)
 	{
-		num *= 10;
+		printf("Error\n");
+		return (1);
 	}
-	
-	return (num);
+
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
+	return (0);
 }
